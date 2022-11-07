@@ -51,19 +51,19 @@ public class Chromosome {
      * @param partner the chromosome whos genes will combine with this gene
      * @return the new child chromosome.
      */
-    public Chromosome onePointCrosssover(Chromosome partner){
-        Chromosome child = new Chromosome(genes.length);
+    public Chromosome crossover(Chromosome partner){
+        Chromosome offspring = new Chromosome(genes.length);
 
         int midpoint = (random.nextInt(genes.length));
 
         for(int i = 0;i<genes.length;i++){
             if(i>midpoint){
-                child.setGenesAtIndex(getGenes(),i);
+                offspring.setGenesAtIndex(getGenes(),i);
             } else {
-                child.setGenesAtIndex(partner.getGenes(), i);
+                offspring.setGenesAtIndex(partner.getGenes(), i);
             }
         }
-        return child;
+        return offspring;
     }
 
     /**

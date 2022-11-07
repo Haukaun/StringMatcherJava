@@ -8,7 +8,7 @@ public class Main {
     int populationSize = 1000;
     double mutationRate = 0.01;
     String targetPhrase = "Hakon Satre";
-    double crossoverRate = 1.0;
+    double crossoverRate = 1;
     Population population;
 
 

@@ -55,7 +55,8 @@ public class Population {
     }
 
     /**
-     * Uses the fitness of the chromosomes to create a mating pool.
+     * Determines the amount of times a chromosome appears in the mating pool
+     * and populates the mating pool.
      */
     public void naturalSelection(){
         matingPool.clear();
@@ -97,7 +98,7 @@ public class Population {
             //Mate the two parents
 
             if (random.nextDouble() <= crossoverRate){
-                Chromosome child = partnerA.onePointCrosssover(partnerB);
+                Chromosome child = partnerA.crossover(partnerB);
                 //Mutate the child
                 child.mutate(mutationRate);
                 //Place the child in the population
